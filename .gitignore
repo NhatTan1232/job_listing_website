@@ -1,0 +1,25 @@
+# Ignore scrapy auto-generated files
+.scrapy/
+
+# Ignore scrapy cache and logs
+scrapy*.log
+scrapy*.json
+scrapy*.jl
+scrapy*.csv
+
+# Ignore scrapy egg-info directory
+*.egg-info/
+
+# Ignore scrapy state
+.scrapy.state
+
+# Ignore environment-specific settings
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files
+.idea/
+.vscode/

@@ -1,0 +1,234 @@
+body {
+    background-color: #151c48;
+}
+
+.title-section {
+    background-color: #151c48;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.title {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 1.5;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+    font-size: 2.25rem;
+    letter-spacing: 0rem;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 2;
+    font-weight: 400;
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 1.25rem;
+    box-sizing: border-box;
+}
+
+.title-p {
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Base styles for job-list and job-list__item */
+.job-list {
+    background-color: #151c48;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.horizontal-list-item {
+    display: flex;
+    padding: 24px;
+    margin: 34px 92px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.job-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.job-logo-container {
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+}
+
+.static-image {
+    width: 7rem;
+    height: 7rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border-radius: 0.5rem;
+}
+
+.job-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.job-title-container {
+    margin-bottom: 0.5rem;
+}
+
+.job-title-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.job-title-link h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.job-company-container {
+    margin-bottom: 0.5rem;
+}
+
+.com-name-p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.job-meta-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.levels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.tag {
+    font-size: 0.875rem;
+    color: #868686;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 0 8px;
+    width: 400px;
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.search-icon svg {
+    width: 20px;
+    height: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    font-size: 16px;
+}
+
+.search-clear-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+}
+
+.search-clear-button svg {
+    width: 20px;
+    height: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.search-clear-button:hover svg {
+    color: #c82333;
+}
+
+.infinite-scroll-loader,
+.infinite-scroll-end-message {
+    text-align: center;
+    color: #ffffff;
+    background-color: #151c48;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.infinite-scroll-loader {
+    border-bottom: 1px solid #ffffff;
+}
+
+.infinite-scroll-end-message {
+    border-bottom: 1px solid #ffffff;
+}
+
+.job-expanded-info {
+    border-top: 1px solid #dcdcdc;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 16px;
+}
+
+.job-expanded-info strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.job-description, .job-address, .job-requirement, .job-benefits, .job-skills, .job-industry {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.benefits-list, .requirement-list {
+    list-style-type: none; 
+    padding-left: 15px;
+}
+

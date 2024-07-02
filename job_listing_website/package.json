@@ -1,0 +1,20 @@
+{
+  "name": "job-listing-website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.21",
+    "axios": "^1.7.2",
+    "concurrently": "^8.2.2",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-multiselect-checkbox-dropdown": "^1.0.0",
+    "react-router-dom": "^6.24.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start"
+  }
+}
