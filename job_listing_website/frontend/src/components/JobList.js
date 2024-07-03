@@ -9,23 +9,21 @@ const JobList = () => {
         jobName: '',
         companyName: '',
         skills: '',
-        jobLevel: '',
+        jobLevel: [],
         minSalary: '',
         maxSalary: '',
         industry: ''
     });
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(true);
-    const [layout, setLayout] = useState('layout-1');
     const [expandedJobId, setExpandedJobId] = useState(null);
+    const [jobLevels, setJobLevels] = useState(['Intern', 'Fresher', 'Junior', 'Middle', 'Senior', 'Trưởng Nhóm', 'Trưởng phòng']);
 
     // Function to fetch jobs from the backend based on search parameters
     const fetchJobs = async (page) => {
         try {
             const params = { ...searchParams, page, size: 30 };
-            if (!searchParams.jobLevel.length) {
-                delete params.jobLevel;
-            } else {
+            if (searchParams.jobLevel && searchParams.jobLevel.length) {
                 params.jobLevel = searchParams.jobLevel.join(',');
             }
             const query = new URLSearchParams(params).toString();
@@ -80,7 +78,7 @@ const JobList = () => {
             jobName: '',
             companyName: '',
             skills: '',
-            jobLevel: '',
+            jobLevel: [],
             minSalary: '',
             maxSalary: '',
             industry: ''
@@ -89,6 +87,15 @@ const JobList = () => {
 
     const handleJobClick = (jobId) => {
         setExpandedJobId(expandedJobId === jobId ? null : jobId);
+    };
+
+    const toggleJobLevel = (level) => {
+        setSearchParams(prevState => {
+            const newJobLevels = prevState.jobLevel.includes(level)
+                ? prevState.jobLevel.filter(l => l !== level)
+                : [...prevState.jobLevel, level];
+            return { ...prevState, jobLevel: newJobLevels };
+        });
     };
 
     return (
@@ -123,6 +130,24 @@ const JobList = () => {
                     </div>
                 </form>
             </div>
+            
+            <div className="job-level-container">
+                <h6 className="job-level-tag-title">
+                    LEVEL
+                </h6>
+                <div className="tag-level-container">
+                    {jobLevels.map(level => (
+                        <div
+                            key={level}
+                            className={`MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-outlinedDefault tag ${searchParams.jobLevel.includes(level) ? 'selected' : ''}`}
+                            onClick={() => toggleJobLevel(level)}
+                        >
+                            <span className="level-tag">{level}</span>
+                            <span className="MuiTouchRipple-root"></span>
+                        </div>
+                    ))}
+                </div>
+            </div>
 
             <InfiniteScroll
                 dataLength={jobs.length}
@@ -131,7 +156,7 @@ const JobList = () => {
                 loader={<h4 className="infinite-scroll-loader">Loading...</h4>}
                 endMessage={<p className="infinite-scroll-end-message">No more jobs to show</p>}
             >
-                <ul className={`job-list ${layout}`}>
+                <ul className={`job-list`}>
                     {jobs.map((job) => (
                         <li className="horizontal-list-item" key={job.job_id} onClick={() => handleJobClick(job.job_id)}>
                             <div>
