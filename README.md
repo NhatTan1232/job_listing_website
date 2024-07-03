@@ -21,7 +21,7 @@ This project involces crawling job data from the internet, storing it in MySQL, 
 * Elasticsearch Cloud (And an API key)
 * Node.js (for frontend development)
 
-### Packages (Make sure these are installed if they're not)
+### Packages (Make sure these are installed in your computer or enviroment)
 * bs4
 * elasticsearch
 * mysql-connector-python
