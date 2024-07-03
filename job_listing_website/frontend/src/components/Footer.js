@@ -11,7 +11,7 @@ const Footer = () => {
                     <p>Student Email: <a href="mailto:22521313@gm.uit.edu.vn">22521313@gm.uit.edu.vn</a></p>
                 </div>
                 <div className="footer-section">
-                    <h3>Connect With Me</h3>
+                    <h3>Connect With Us</h3>
                     <p>
                         <a href="https://www.facebook.com/profile.php?id=100069915024301" target="_blank" rel="noopener noreferrer">Facebook</a>
                     </p>

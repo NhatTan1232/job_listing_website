@@ -14,7 +14,9 @@ const Header = () => {
                 <Link to="/" className='homejob'>Home</Link>
                 <Link to="/jobs" className='homejob'>Jobs</Link>
                 <a href="#about-contact" className='aboutcontact'>About itFind</a>
-                <a href="#about-contact" className='aboutcontact'>Contact</a>
+                <a href="/add-job" className="add-job-button">
+                    <span className="add-job-text">Add a job</span>
+                </a>
             </nav>
         </header>
     );

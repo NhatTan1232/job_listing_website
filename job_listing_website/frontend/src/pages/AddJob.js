@@ -1,0 +1,114 @@
+import React, { useRef, useState } from 'react';
+import './AddJob.css'; 
+
+const AddJob = () => {
+    const fileInputRef = useRef(null);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [selectedLevel, setSelectedLevel] = useState('Select Level');
+    const [level] = useState(['Intern', 'Fresher', 'Junior', 'Middle', 'Senior', 'Trưởng nhóm', 'Trưởng phòng']);
+
+    const handleFileBoxClick = () => {
+        if (fileInputRef.current) {
+            fileInputRef.current.click();
+        }
+    };
+
+    const handleDropdownClick = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
+    const handleLevelSelect = (level) => {
+        setSelectedLevel(level);
+        setIsDropdownOpen(false);
+    };
+
+    return (
+        <div class="aj-container">
+            <div class="aj-form-wrapper">
+                <h1 class="aj-form-title">Add a job</h1>
+                <p class="aj-form-description">You know what you are looking for. Post your open positions and hire fast the best talent.</p>
+                <form class="aj-form-inputs">
+                    <div class="aj-form-group">
+                        <label for="job-title">Job Title *</label>
+                        <input type="text" id="job-title" name="job-title" placeholder="Open position title" required />
+                    </div>
+                    <div class="aj-form-group">
+                        <label for="company">Company *</label>
+                        <input type="text" id="company" name="company" placeholder="Your company's name" required />
+                    </div>
+                    <div class="aj-form-group">
+                        <label for="job-description">Job Description </label>
+                        <textarea id="job-description" name="job-description" placeholder="An overview of your company and position's tasks"></textarea>
+                    </div>
+                    <div class="aj-form-group">
+                        <label for="location">Location *</label>
+                        <input type="text" id="location" name="location" placeholder="City" required />
+                    </div>
+                    <div className="aj-form-group">
+                        <label htmlFor="requirements">Requirements *</label>
+                        <textarea type="text" id="requirements" name="requirements" placeholder="List the requirements" required />
+                    </div>
+                    <div class="aj-form-group">
+                        <label for="skills">Skills *</label>
+                        <input type="text" id="skill" name="skill" placeholder="Technical skills" required/>
+                    </div>
+                    <div className="aj-form-group">
+                        <label htmlFor="benefits">Benefits *</label>
+                        <textarea type="text" id="benefits" name="benefits" placeholder="List the benefits" required />
+                    </div>
+                    <div class="aj-form-group">
+                        <label for="industry">Industry</label>
+                        <input type="text" id="industry" name="industry" placeholder="Your industry" />
+                    </div>
+                    <div className="aj-form-group">
+                        <label htmlFor="level">Level *</label>
+                        <div className="my-select-button" onClick={handleDropdownClick}>
+                            <div className="my-select-content">{selectedLevel}</div>
+                            <i className="MuiBox-root css-11htchx">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256">
+                                    <rect width="256" height="256" fill="none"></rect>
+                                    <polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                                </svg>
+                            </i>
+                            {isDropdownOpen && (
+                                <div className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiMenu-paper MuiPopover-paper MuiMenu-paper css-1eipfjm">
+                                    <ul className="MuiList-root MuiList-padding MuiMenu-list css-r8u8y9" role="listbox" tabIndex="-1">
+                                        {level.map((level) => (
+                                            <li
+                                                key={level}
+                                                className="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1fnc6ii"
+                                                role="option"
+                                                aria-selected="false"
+                                                onClick={() => handleLevelSelect(level)}
+                                            >
+                                                <div
+                                                    style={{
+                                                        textOverflow: 'ellipsis',
+                                                        whiteSpace: 'nowrap',
+                                                        overflow: 'hidden',
+                                                        width: '100%',
+                                                        fontSize: '0.875rem',
+                                                        color: 'rgb(116, 116, 116)',
+                                                    }}
+                                                >
+                                                    {level}
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                    <div class="aj-form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required />
+                    </div>
+                    <button type="submit" class="aj-submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    );
+};
+
+export default AddJob;
