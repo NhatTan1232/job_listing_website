@@ -2,6 +2,7 @@
 * [About The Project](#about-the-project)
 * [Getting Started](#getting-started)
 * [Installation](#installation)
+* [Video](#video)
 * [Contributing](#contributing)
 
 
@@ -76,3 +77,6 @@ This project involces crawling job data from the internet, storing it in MySQL, 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any changes.
 (I may forget to include some prerequisites so if there are any error, let me know)
+
+## Video
+https://youtu.be/8EgxiUKGux0
