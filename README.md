@@ -1,21 +1,26 @@
 ## Table of Contents
 * [About The Project](#about-the-project)
-* [Getting Started](#getting-started)
 * [Installation](#installation)
-* [Video](#video)
+* [Video Demo](#video-demo)
 * [Contributing](#contributing)
 
-
 ## About The Project
-### Job Listing Website
+## Job Listing Website
 This project involces crawling job data from the internet, storing it in MySQL, setting up an Elasticsearch database for the search service, and building a job searchinng website.
 
-### Project Structure
+## Project Structure
 * Data Crawling: Crawl job listing data and store it in a MySQL database.
 * Elasticsearch Setup: Create a dedicated Elasticsearch database for the search service.
 * Website Development: Build a website that allows users to search for job listings.
 
-## Getting Started
+## Tech Stack
+* Web Scraping: Scrapy
+* Search Engine: Elasticsearch
+* Database: MySQL
+* Frontend: HTML, CSS, JavaScript
+* Backend: Python, Flask
+
+## Installation
 ### Prerequisites
 * Python 3.x
 * MySQL
@@ -31,7 +36,7 @@ This project involces crawling job data from the internet, storing it in MySQL, 
 * scrapy-user-agents
 * npm
 
-## Installation
+### Steps
 1. Create a MySQL database (I used MySQL Workbench 8.0 CE).
 2. Set up your Elastic Cloud deployment and generate an API key.
 3. Clone the repository
@@ -74,9 +79,9 @@ This project involces crawling job data from the internet, storing it in MySQL, 
   npm start
 ```
 
-## Video
+## Video Demo
 https://youtu.be/8EgxiUKGux0
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any changes.
-(I may forget to include some prerequisites so if there are any error, let me know)
+For questions or feedback, please contact me at vovankhanh12345678@gmail.com.
