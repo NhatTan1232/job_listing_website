@@ -6,7 +6,7 @@
 
 ## About The Project
 ## Job Listing Website
-This project involces crawling job data from the internet, storing it in MySQL, setting up an Elasticsearch database for the search service, and building a job searchinng website.
+This project involces crawling job data from the internet, storing it in MySQL, setting up an Elasticsearch database for the search service, and building a job searching website.
 
 ## Project Structure
 * Data Crawling: Crawl job listing data and store it in a MySQL database.
